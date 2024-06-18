@@ -1,0 +1,749 @@
+.sixfr
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.midfr
+{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  text-align: center;
+}
+
+h1 {
+  font-size:xx-large; color: antiquewhite;
+}
+
+h3 {
+    font-size:large; color: rgb(99, 55, 14);
+  }
+
+body {
+    background-image: url(puddle.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 75%;
+    top: 20%;
+}
+
+.outer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.outer img,{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.inner{
+  position: absolute;
+  display: none;
+  cursor:progress;
+  top: 0;
+  left: 0;
+ }
+
+.inner img,{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+ .outer:hover .inner{
+  display: block;
+ }
+
+ 
+ .monkey > * {
+    /* Adjust animation duration to change the element’s speed */
+            animation: monkey 30s linear infinite;
+            pointer-events:none !important;
+        top: 0;
+        left: 0;
+        transform: translateX(-120%) translateY(-120%) rotateZ(0);
+        position: fixed;
+        animation-delay: 0s;
+        z-index: 0;
+    }
+    
+     /* Keyframe values control where the element will begin
+        and end its trajectory across the screen. Each rule
+        represents a path the element follows across the screen. */
+    
+    
+    @keyframes monkey {
+        0% {
+            -webkit-transform: translateX(1vw) translateY(72vh) 
+        }
+        10% {
+            -webkit-transform: translateX(1vw) translateY(72vh) 
+        }
+    
+        50% {
+            -webkit-transform: translateX(80vw) translateY(72vh)
+        }
+    
+        51% {
+            -webkit-transform: translateX(80vw) translateY(72vh) rotateY(180deg)
+        }
+    
+        100% {
+            -webkit-transform: translateX(-20vw) translateY(72vh) rotateY(180deg)
+        }
+    }
+
+.monkey:hover{
+    -webkit-animation-play-state: paused;
+  }
+
+ .flier {
+	pointer-events: none;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 20s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 0s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(180deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(10deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(10deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(220deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(220deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(290deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(290deg)
+	}
+}
+
+.flier1 {
+	pointer-events: none;
+}
+
+.flier1 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly1 20s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 20ms;
+	z-index: 999999;
+	opacity:50% ;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly1 {
+
+	98.001%, 0% {
+		transform: translateX(-200%) translateY(100vh) rotateZ(180deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg) rotateX(9000deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(10deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(10deg) rotateX(9000deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(220deg) rotateX(999deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(220deg) rotateX(999deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(290deg) rotateX(999deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(290deg) rotateX(999deg)
+	}
+}
+
+.flier2 {
+	pointer-events: none;
+}
+
+.flier2 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly2 25s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 3s;
+	z-index: 999998;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly2 {
+
+	98.001%, 0% {
+		display: block;
+transform: translateX(50vw) translateY(130vh) rotateZ(90deg)
+}
+
+15% {
+transform: translateX(40vw) translateY(40vh) rotateZ(90deg)
+}
+
+15.001%, 18% {
+	transform: translateX(40vw) translateY(40vh) rotateZ(90deg)
+}
+
+25% {
+	transform: translateX(40vw) translateY(40vh) rotateZ(45deg)
+}
+
+25.001%, 27% {
+	transform: translateX(40vw) translateY(40vh) rotateZ(45deg)
+}
+
+50% {
+	transform: translateX(-20vw) translateY(10vh) rotateZ(45deg)
+}
+
+51% {
+	transform: translateX(-20vw) translateY(-30vh) rotateZ(215deg)
+}
+
+52% {
+	transform: translateX(-30vw) translateY(-30vh) rotateZ(230deg)
+}
+
+65.001%, 68% {
+	transform: translateX(58vw) translateY(43vh) rotateZ(230deg)
+}
+
+75% {
+	transform: translateX(58vw) translateY(43vh) rotateZ(315deg)
+}
+
+95% {
+	transform: translateX(40vw) translateY(130vh) rotateZ(315deg)
+}
+
+100% {
+transform: translateX(50vw) translateY(130vh) rotateZ(90deg)
+}
+}
+
+.flier3 {
+	pointer-events: none;
+}
+
+.flier3 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly3 25s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 2s;
+	z-index: 999998;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly3 {
+
+0% {
+		display: block;
+	transform: translateX(20vw) translateY(-20vh) rotateZ(240deg)
+}
+
+15% {
+	transform: translateX(75vw) translateY(70vh) rotateZ(240deg) 
+}
+
+18% {
+	transform: translateX(75vw) translateY(70vh) rotateZ(365deg)
+}
+
+25% {
+	transform: translateX(15vw) translateY(85vh) rotateZ(365deg)
+}
+
+29% {
+	transform: translateX(15vw) translateY(83vh) rotateZ(515deg)
+}
+
+50% {
+	transform: translateX(50vw) translateY(10vh) rotateZ(515deg)
+}
+
+55% {
+	transform: translateX(50vw) translateY(10vh) rotateZ(240deg)
+}
+
+65% {
+	transform: translateX(87vw) translateY(90vh) rotateZ(240deg)
+}
+
+70% {
+	transform: translateX(87vw) translateY(90vh) rotateZ(400deg)
+}
+
+80% {
+	transform: translateX(15vw) translateY(10vh) rotateZ(400deg)
+}
+
+85% {
+	transform: translateX(15vw) translateY(10vh) rotateZ(260deg)
+}
+
+95% {
+	transform: translateX(35vw) translateY(120vh) rotateZ(260deg)
+}
+
+97% {
+transform: translateX(-20vw) translateY(120vh) rotateZ(240deg)
+}
+98% {
+transform: translateX(-20vw) translateY(-20vh) rotateZ(240deg)
+}
+
+99% {
+transform: translateX(20vw) translateY(-20vh) rotateZ(240deg)
+}
+}
+.walk2 {
+	pointer-events: none;
+}
+
+.walk2 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: walk2 40s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 10s;
+	z-index: 999999;
+    -webkit-animation-direction: reverse;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes walk2 {
+
+	0% {
+		transform: translateX(120vw) translateY(50vh) rotateZ(-20deg)
+	}
+
+	50% {
+		transform: translateX(-20vw) translateY(50vh) rotateZ(-20deg)
+	}
+
+	51% {
+		transform: translateX(-20vw) translateY(50vh) rotateZ(12deg) rotateY(180deg)
+	}
+
+	100% {
+		transform: translateX(120vw) translateY(50vh) rotateZ(12deg) rotateY(180deg)
+	}
+}
+
+.walk1 {
+	pointer-events: none;
+}
+
+.walk1 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: walk1 40s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 10s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes walk1 {
+
+	0% {
+		transform: translateX(-20vw) translateY(85vh) rotateZ(-20deg)
+	}
+
+	50% {
+		transform: translateX(120vw) translateY(85vh) rotateZ(-20deg)
+	}
+
+	51% {
+		transform: translateX(120vw) translateY(85vh) rotateZ(12deg) rotateY(180deg)
+	}
+
+	100% {
+		transform: translateX(-20vw) translateY(85vh) rotateZ(12deg) rotateY(180deg)
+	}
+}
+
+.walk3 {
+	pointer-events: none;
+}
+
+.walk3 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: walk3 40s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 10s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes walk3 {
+
+	0% {
+		transform: translateX(-20vw) translateY(15vh) rotateZ(-20deg)
+	}
+
+	50% {
+		transform: translateX(120vw) translateY(15vh) rotateZ(-20deg)
+	}
+
+	51% {
+		transform: translateX(120vw) translateY(15vh) rotateZ(12deg) rotateY(180deg)
+	}
+
+	100% {
+		transform: translateX(-20vw) translateY(15vh) rotateZ(12deg) rotateY(180deg)
+	}
+}
+
+.walk4 {
+	pointer-events: none;
+}
+
+.walk4 > * {
+/* Adjust animation duration to change the element’s speed */
+animation: walk4 40s linear infinite;
+pointer-events: none !important;
+top: 0;
+left: 0;
+transform: translateX(-120%) translateY(-120%) rotateZ(0);
+position: fixed;
+animation-delay: 7s;
+z-index: 999999;
+}
+
+/* Keyframe values control where the element will begin
+and end its trajectory across the screen. Each rule
+represents a path the element follows across the screen. */
+
+
+@keyframes walk4 {
+
+0% {
+transform: translateX(-20vw) translateY(30vh) rotateZ(-20deg)
+}
+
+50% {
+transform: translateX(120vw) translateY(30vh) rotateZ(-20deg)
+}
+
+51% {
+transform: translateX(120vw) translateY(30vh) rotateZ(12deg) rotateY(180deg)
+}
+
+100% {
+transform: translateX(-20vw) translateY(30vh) rotateZ(12deg) rotateY(180deg)
+}
+}
+
+.walk5 {
+	pointer-events: none;
+}
+
+.walk5 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: walk5 40s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 7s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes walk5 {
+
+	0% {
+		transform: translateX(-20vw) translateY(70vh) rotateZ(-20deg)
+	}
+
+	50% {
+		transform: translateX(120vw) translateY(70vh) rotateZ(-20deg)
+	}
+
+	51% {
+		transform: translateX(120vw) translateY(70vh) rotateZ(12deg) rotateY(180deg)
+	}
+
+	100% {
+		transform: translateX(-20vw) translateY(70vh) rotateZ(12deg) rotateY(180deg)
+	}
+}
+
+.walk6 {
+	pointer-events: none;
+}
+
+.walk6 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: walk6 40s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 10s;
+	z-index: 999999;
+    -webkit-animation-direction: reverse;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes walk6 {
+
+	0% {
+		transform: translateX(120vw) translateY(-3vh) rotateZ(192deg) rotateY(180deg) 
+	}
+
+	50% {
+		transform: translateX(-20vw) translateY(-3vh) rotateZ(192deg) rotateY(180deg) 
+	}
+
+	51% {
+		transform: translateX(-20vw) translateY(-3vh) rotateZ(160deg)
+	}
+
+	100% {
+		transform: translateX(120vw) translateY(-3vh) rotateZ(160deg)
+	}
+}
+
+#background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 0px solid #333;
+    overflow: hidden;
+    margin: 0% auto;
+    z-index: -1;
+  }
+
+#container {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    border: 0px solid #333;
+    overflow: hidden;
+    margin: 0% auto;
+    z-index: 0;
+  }
+  
+  #box {
+    -webkit-animation-name: top;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate-reverse;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  
+  #box:hover {
+    -webkit-animation-play-state: paused;
+  }
+  
+  @-webkit-keyframes top {
+    0% {
+      margin-top: 50%;
+    }
+    100% {
+      margin-top: 400%;
+    }
+  }
+  
+  #box- {
+    -webkit-animation-name: bottom;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  
+  #box-:hover {
+    -webkit-animation-play-state: paused;
+  }
+  
+  @-webkit-keyframes bottom {
+    0% {
+      margin-top: 60%;
+    }
+    100% {
+      margin-top: 400%;
+    }
+  }
+  .elements{
+      position: relative;	
+      margin:  0 auto;
+      cursor: pointer;
+      transition: scale 200ms;
+  }
+  .elements :hover{
+      scale: 1.5;
+  
+  }
+  .disappear2{
+      animation-duration: 40s;
+      animation-name: appear;
+      animation-iteration-count: infinite;
+      animation-delay: 13s;
+      }
+  
+  .disappear{
+  animation-duration: 5s;
+  animation-name: appear;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out
+  }
+  
+  @keyframes appear {
+  
+      0%{
+          opacity: 0;
+  
+      100%{
+          opacity: 1;
+      }
+  }
+  
+  .outer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .outer img,{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+  
+  .inner img,{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+  
+   .inner{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+   }
+   .outer:hover .inner{
+    display: block;
+   }
+
